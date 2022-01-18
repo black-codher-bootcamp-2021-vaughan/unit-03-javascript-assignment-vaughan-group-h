@@ -4,8 +4,7 @@ export const dates = [
     date: "2600 BC",
     fullDescription:
       "The Egyptians were also pioneers in baking as the first recorded civilization to use yeast in their bread as long ago as 2600 BC.",
-    image:
-      "https://i1.wp.com/www.atthemummiesball.com/wp-content/uploads/2018/04/Relief-Depicting-the-Nurse-Tia.jpg?ssl=1",
+    image:"https://i1.wp.com/www.atthemummiesball.com/wp-content/uploads/2018/04/Relief-Depicting-the-Nurse-Tia.jpg?ssl=1",
     summary: "The Egyptians are the first recorded civilization to use yeast",
   },
   {
