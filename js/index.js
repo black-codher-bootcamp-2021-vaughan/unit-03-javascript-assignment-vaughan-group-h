@@ -45,7 +45,7 @@ dates.map((item) => {
   const timelineItemMoreInfo = document.createElement('button')
   timelineItemMoreInfo.className = 'timeline-item-more-info'
   timelineItemMoreInfo.textContent = 'more info'
-  // timelineItemMoreInfo.addEventListener("click", () => openModal(item));
+  timelineItemMoreInfo.addEventListener("click", () => openModal(item));
   timelineItemDiv.appendChild(timelineItemMoreInfo)
 
 })
@@ -53,14 +53,16 @@ dates.map((item) => {
 // The Modal
 
 function openModal(item) {
+  console.log('Hi')
     const modal = document.createElement('div')
   modal.id = 'modal-container' ;
-   newDiv.appendChild(modal) ;
+ 
 
-  const date = document.createElement(h3) ;
+  const date = document.createElement('h3') ;
      date.id = 'modal-date' ;
-   modal.textContent = item.date ;
+  date.textContent = item.date ;
+   console.log(date)
   modal.appendChild(date) ;
-
+timeline.appendChild(modal)
 }
 
