@@ -11,35 +11,56 @@ const timeline = document.querySelector(".timeline");
 // HEADING
 const heading = document.createElement('h1')
 heading.classList.add('timeline-heading')
-heading.textContent = 'Welcome to my timeline'
+heading.textContent = 'Maymes Bakery Timeline'
 timeline.appendChild(heading)
 
 // looping 
 dates.map((item) => {
 
   // HEADING
+  const timelineItem = document.createElement('div')
+  timelineItem.innerText = 'timeline-item'
+  timelineItem.appendChild(timeline)
+  timeline.appendChild
   const timelineItemDiv = document.createElement('div')
-  timelineItemDiv.className = 'timeline-item'
+  document.body.prepend(timelineItem);
   timelineItem.appendChild(timelineItemDiv)
+
 
   const timelineItemH2 = document.createElement('H2')
   timelineItemH2.className = 'timeline-item-title'
-  timelineItemH2.textContent = item.title
+  document.body.prepend(timelineItemH2);
   timelineItemDiv.appendChild(timelineItemH2)
 
   const timelineItemDate = document.createElement('span')
-  timelimeItemDate.className = 'timeline-item-date'
+  timelineItemDate.className = 'timeline-item-date'
   timelineItemDate.textContent = item.date
-  timelineItemDiv.appendChild(timelimeItemDate)
+  timelineItemDiv.appendChild(timelineItemDate)
 
   const timelineItemSummary = document.createElement('text')
   timelineItemSummary.className = 'timeline-item-summary'
   timelineItemSummary.textContent = item.summary
-  timelineItemDiv.appendChild(timelimeItemSummary)
+  timelineItemDiv.appendChild(timelineItemSummary)
 
   const timelineItemMoreInfo = document.createElement('button')
   timelineItemMoreInfo.className = 'timeline-item-more-info'
   timelineItemMoreInfo.textContent = 'more info'
+  // timelineItemMoreInfo.addEventListener("click", () => openModal(item));
   timelineItemDiv.appendChild(timelineItemMoreInfo)
+
 })
+
+// The Modal
+
+function openModal(item) {
+    const modal = document.createElement('div')
+  modal.id = 'modal-container' ;
+   newDiv.appendChild(modal) ;
+
+  const date = document.createElement(h3) ;
+     date.id = 'modal-date' ;
+   modal.textContent = item.date ;
+  modal.appendChild(date) ;
+
+}
 
