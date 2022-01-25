@@ -71,41 +71,57 @@ function openModal(item) {
   console.log('Bakery')
     const modal = document.createElement('div')
   modal.id = 'modal-container' ;
+ document.body.append(modal) ;
+const modalContent = document.createElement('div')
+modalContent.className = 'modal-Content' 
+modal.append(modalContent)
+
+ // Create a close-button
+
+ const button = document.createElement('button')
  
+ button.id = 'modal-close-button' ;
+ button.textContent = 'X'
+ button.onclick = function() {
+     modal.remove() 
+     console.log(modal)
+ }
+modalContent.append(button)
+window.onclick = function(e) {
+
+  if (e.target == modal) {
+    modal.remove()
+  }
+
+}
 
   const date = document.createElement('h3') ;
      date.id = 'modal-date' ;
   date.textContent = item.date ;
   console.log(date)
-  modal.appendChild(date) ;
-timeline.appendChild(modal)
+  modal.append(date) ;
+//timeline.appendChild(modal)
 
 const title = document.createElement('h3') ;
 title.id = 'modal-title' ;
 title.textContent = item.title ;
 console.log(title)
-modal.appendChild(title) ;
-timeline.appendChild(modal) ;
+modal.append(title) ;
+//timeline.append(modal) ;
 
-// const image = document.createElement('h3') ; 
-// image.id = 'modal-image' ;
-// //image.setAttribute("src", image);
-// img src = "image" ;
-// //image.imageContent = item.image ;
-// console.log(image)
-// modal.appendChild(image) ;
-// timeline.appendChild(modal) ;
+ const image = document.createElement('img') ; 
+image.id = 'modal-image' ;
+image.setAttribute("src", item.image);
+console.log(image)
+ modal.append(image) ;
 
-// const img = document.createElement("img");
-// img.src = "image";
-// document.body.appendChild(img);
-
+ 
 const fullDescription = document.createElement('p') ;
 fullDescription.id = 'modal-full-description' ;
 fullDescription.textContent = item.fullDescription ;
 console.log(fullDescription)
-modal.appendChild(fullDescription) ;
-timeline.appendChild(modal) ;
+modal.append(fullDescription) ;
+//timeline.appendChild(modal) ;
 
 
 
