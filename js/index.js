@@ -7,52 +7,35 @@ const timeline = document.querySelector(".timeline");
 // give it a class name
 // Add content - optional
 // Append to a parent element
-
-// HEADING
+// // // HEADING
 const heading = document.createElement('h1')
 heading.classList.add('timeline-heading')
 heading.textContent = 'Maymes Bakery Timeline'
 timeline.appendChild(heading)
 
+const containerTimeline = document.createElement('div')
+containerTimeline.className = 'timeline-container'
+timeline.appendChild(containerTimeline)
+console.log(containerTimeline)
 // looping 
-dates.map((item) => {
+dates.map((item, i) => {
 
-  // HEADING
-  const timelineItem = document.createElement('div')
-  //timelineItem.innerText = 'timeline-item'
-  timelineItem.appendChild(timeline)
-  timeline.appendChild
   const timelineItemDiv = document.createElement('div')
-  document.body.prepend(timelineItem);
-  timelineItem.appendChild(timelineItemDiv)
+  const position = i%2 ? "right": "left"
+  timelineItemDiv.className = 'timeline-item-div ' + position
+  containerTimeline.appendChild(timelineItemDiv)
 
-
-  const timelineItemH2 = document.createElement('H2')
+  const timelineItemH2 = document.createElement('h2')
   timelineItemH2.className = 'timeline-item-title'
-  document.body.prepend(timelineItemH2);
-  timelineItemDiv.appendChild(timelineItemH2)
+  timelineItemH2.textContent = item.title
+  timelineItemDiv.appendChild(timelineItemH2);
 
-  //  const timelineItemDate = document.createElement('span')
-  //  timelineItemDate.className = 'timeline-item-date'
-  //  timelineItemDate.textContent = item.date
-  //  timelineItemDiv.appendChild(timelineItemDate)
+  const timelineItemDate = document.createElement('span')
+  timelineItemDate.className = 'timeline-item-date'
+  timelineItemDate.textContent = item.date
+  timelineItemDiv.appendChild(timelineItemDate)
 
-//   const timelineItemTitle = document.createElement('span')
-//   timelineItemTitle.className = 'timeline-item-title'
-//   timelineItemTitle.textContent = item.title
-//   timelineItemDiv.appendChild(timelineItemTitle)
-
-// // const Image = querySelector.('image')
-// //   Image.className = 'timeline-item-image'
-// //   Image.imageContent = item.image
-// //   timelineItemDiv.appendChild(Image)
-
-//   const img = document.createElement("img");
-//  img.src = "image";
-//  document.body.appendChild(img);
-  
-
-  const timelineItemSummary = document.createElement('text')
+  const timelineItemSummary = document.createElement('p')
   timelineItemSummary.className = 'timeline-item-summary'
   timelineItemSummary.textContent = item.summary
   timelineItemDiv.appendChild(timelineItemSummary)
@@ -68,7 +51,7 @@ dates.map((item) => {
 // The Modal
 
 function openModal(item) {
-  console.log('Bakery')
+  // console.log('Bakery')
     const modal = document.createElement('div')
   modal.id = 'modal-container' ;
  document.body.append(modal) ;
@@ -94,7 +77,7 @@ window.onclick = function(e) {
   }
 
 }
-
+//date
   const date = document.createElement('h3') ;
      date.id = 'modal-date' ;
   date.textContent = item.date ;
@@ -122,8 +105,6 @@ fullDescription.textContent = item.fullDescription ;
 console.log(fullDescription)
 modal.append(fullDescription) ;
 //timeline.appendChild(modal) ;
-
-
 
 }
 
