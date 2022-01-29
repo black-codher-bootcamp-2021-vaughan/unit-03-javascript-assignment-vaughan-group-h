@@ -1,7 +1,7 @@
 
 function historicalItem(summary)
 
-const 
+const
 
 
 

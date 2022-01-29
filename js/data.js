@@ -1,14 +1,5 @@
 export const dates = [
   {
-    title: "Yeast",
-    date: "2600 BC",
-    fullDescription:
-      "The Egyptians were also pioneers in baking as the first recorded civilization to use yeast in their bread as long ago as 2600 BC.",
-    image:
-      "https://i1.wp.com/www.atthemummiesball.com/wp-content/uploads/2018/04/Relief-Depicting-the-Nurse-Tia.jpg?ssl=1",
-    summary: "The Egyptians are the first recorded civilization to use yeast",
-  },
-  {
     title: "Sugar",
     date: "1069 AD",
     fullDescription:
@@ -62,4 +53,13 @@ export const dates = [
       "https://www.wilton.com/dw/image/v2/AAWA_PRD/on/demandware.static/-/Sites-wilton-project-master/default/dw13ab30a5/images/project/WLPROJ-9083/RoMaCa_43176%2001.jpg?sw=800&sh=800",
     summary: "The first synthetic organic dye was discovered",
   },
+  {
+    title: "Yeast",
+    date: "2600 BC",
+    fullDescription:
+      "The Egyptians were also pioneers in baking as the first recorded civilization to use yeast in their bread as long ago as 2600 BC.",
+    image:"https://i1.wp.com/www.atthemummiesball.com/wp-content/uploads/2018/04/Relief-Depicting-the-Nurse-Tia.jpg?ssl=1",
+    summary: "The Egyptians are the first recorded civilization to use yeast",
+  },
+
 ];

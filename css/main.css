@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Pacifico&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-block-start: 1.5em;
+    margin-block-end: 1.5em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: rgb(119, 65, 34);
+  top: 15%;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+/* body {
+  background-image: url('/Users/lemuelaf/unit-03-javascript-assignment-vaughan-group-h/Pastry bg 2.jpeg');
+  background-size: length;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+}
+*/
+
+body::before{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  opacity: 0.8;
+}
+
+h1 {
+  text-align: center;
+  padding: 50px 50px 20px 50px;
+
+font-family: "Pacifico", cursive;
+  font-weight: normal;
+  font-size: 70px;
+}
+
+h2 {
+  display: block;
+  text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 1.5em;
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
+
+button {
+  background: none;
+  border: 2px solid darkgray;
+  font-size: medium;
+  cursor: pointer;
+  display: block;
+  width: 6em;
+  height: 2em;
+  margin: 0 auto;
+}
+
+#modal-container{
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(250, 241, 231);
+    padding: 1rem;
+    padding-top: 1em;
+    padding-right: 1em;
+    padding-bottom: 1em;
+    padding-left: 1em;
+
+}
+
+#modal-image{
+    width: 65%;
+    max-width: 480px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+#modal-date {
+font-size: 250%;
+}
+
+#modal-title{
+  font-size: 250%;
+}
+
+#modal-full-description{
+  font-size: x-large;
+  justify-content: center;
+  display: flex;
+  padding: 2rem;
+}
+
+.timelineContainer{
+    position: relative;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+
+.timeline-item-div{
+  padding: 10px 40px;
+  width: 50%;
+  position: relative;
+  box-shadow: rgb(59 4 47 / 32%) 0px 20px 30px -10px;
+}
+
+.left{
+  left: 0;
+
+}
+
+
+.right{
+  left: 50%;
+}
+
+
+
+
+
+
+
+
+
