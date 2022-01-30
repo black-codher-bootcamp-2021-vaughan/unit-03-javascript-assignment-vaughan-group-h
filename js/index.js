@@ -2,12 +2,7 @@ import { dates } from "../js/data.js";
 
 const timeline = document.querySelector(".timeline");
 
-// 1st step
-// Create the html element
-// give it a class name
-// Add content - optional
-// Append to a parent element
-// // // HEADING
+
 const heading = document.createElement('h1')
 heading.classList.add('timeline-heading')
 heading.textContent = 'Maymes Bakery Timeline'
@@ -17,7 +12,8 @@ const containerTimeline = document.createElement('div')
 containerTimeline.className = 'timeline-container'
 timeline.appendChild(containerTimeline)
 console.log(containerTimeline)
-// looping 
+
+// LOOPING 
 dates.map((item, i) => {
 
   const timelineItemDiv = document.createElement('div')
@@ -48,8 +44,7 @@ dates.map((item, i) => {
  
 })
 
-// The Modal
-
+// THE MODAL
 function openModal(item) {
   // console.log('Bakery')
     const modal = document.createElement('div')
@@ -59,8 +54,7 @@ const modalContent = document.createElement('div')
 modalContent.className = 'modal-Content' 
 modal.append(modalContent)
 
- // Create a close-button
-
+ // CREATE CLOSE BUTTON
  const button = document.createElement('button')
  
  button.id = 'modal-close-button' ;
@@ -75,9 +69,9 @@ window.onclick = function(e) {
   if (e.target == modal) {
     modal.remove()
   }
-
 }
-//date
+
+//DATE
   const date = document.createElement('h3') ;
      date.id = 'modal-date' ;
   date.textContent = item.date ;
@@ -98,7 +92,6 @@ image.setAttribute("src", item.image);
 console.log(image)
  modal.append(image) ;
 
- 
 const fullDescription = document.createElement('p') ;
 fullDescription.id = 'modal-full-description' ;
 fullDescription.textContent = item.fullDescription ;
@@ -106,5 +99,9 @@ console.log(fullDescription)
 modal.append(fullDescription) ;
 //timeline.appendChild(modal) ;
 
+const timeline = document.createElement('t');
+timeline.id = 'timeline';
+timeline.setAttribute("timeline-item");
+console.log(timeline)
 }
 
