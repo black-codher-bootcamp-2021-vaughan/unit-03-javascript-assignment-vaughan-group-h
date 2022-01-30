@@ -1,7 +1,7 @@
 import { dates } from "../js/data.js";
 
 const timeline = document.querySelector(".timeline");
-
+timeline.setAttribute("timeline");
 
 const heading = document.createElement('h1')
 heading.classList.add('timeline-heading')
@@ -99,9 +99,5 @@ console.log(fullDescription)
 modal.append(fullDescription) ;
 //timeline.appendChild(modal) ;
 
-const timeline = document.createElement('t');
-timeline.id = 'timeline';
-timeline.setAttribute("timeline-item");
-console.log(timeline)
 }
 
