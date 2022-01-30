@@ -1,7 +1,7 @@
 import { dates } from "../js/data.js";
 
 const timeline = document.querySelector(".timeline");
-timeline.setAttribute("timeline");
+
 
 const heading = document.createElement('h1')
 heading.classList.add('timeline-heading')
